@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>New Business</title>
+    <script src="merchantForm.js.js">  </script>
+    <link rel="stylesheet" href="merchantForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="body">
+    <form id="merchantForm" action="#">
+        <h1>New Business</h1>
+        <h6>We are building a form to get Merchant information for an e-commerce company</h6>
+        <label for="name">Name:<sup>*</sup></label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required/><br><br>
+        <label for="email">Email:<sup>*</sup></label><br>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required /><br><br>
+        <label for="phone">Phone:<sup>*</sup></label><br>
+        <input type="text" id="phone" name="phone" placeholder="Enter your contact number" maxlength="10" required/><br><br>
+        <label for="website">Website:</label><br>
+        <input type="text" id="website" name="website" placeholder="Your website link address" /><br><br>
+        <label for="contactname">Contact Name:<sup>*</sup></label><br>
+        <input type="text" id="contactname" name="contactname" required/><br><br>
+        <label for="contactphone">Contact Phone:<sup>*</sup></label><br>
+        <input type="text" id="contactphone" name="contactphone" maxlength="10" required/><br><br>
+        <label for="contactemail">Contact Email:</label><br>
+        <input type="email" id="contactemail" name="contactemail" /><br><br>
+        <label for="notes">Notes:</label><br>
+        <textarea type="text" id="notes" name="notes"></textarea><br><br>
+        <label for="type">Type:</label><br>
+        <Ion-radio><input type="radio" id="SB" name="type" value="Small Business" /></Ion-radio>
+        <label for="SB">Small Business</label><br>
+        <input type="radio" id="enter" name="type" value="Enterprise" />
+        <label for="enter">Enterprise</label><br>
+        <input type="radio" id="ep" name="type" value="Entrepreneur" />
+        <label for="ep">Entrepreneur</label><br><br>
+        <label for="category">Category:</label><br>
+        <select id="category" multiple>
+            <option type="select" id="category" name="category" value="Cloths">Cloths</option>
+            <option type="select" id="category" name="category" value="Toys">Toys</option>
+            <option type="select" id="category" name="category" value="Groceries">Groceries</option>
+            <option type="select" id="category" name="category" value="Electronics">Electronics</option>
+            <option type="select" id="category" name="category" value="Digital">Digital</option>
+        </select><br><br>
+        <label for="comissionpercentage">Comission Percentage:</label><br>
+        <input type="number" id="comissionpercentage" name="comissionpercentage" /><br><br>
+        <label for="activefrom">Active From:<sup>*</sup></label><br>
+        <input type="date" id="activefrom" name="activefrom" /><br><br>
+        <label for="logo">Logo:</label><br>
+        <input type="file" id="logo" name="logo"><br><br>
+        <label for="criticalaccount" single>Critical Account:</label><br>
+        <input type="checkbox" id="yes" name="criticalaccount" value="YES" />
+        <label for="yes">YES</label>
+        <input type="checkbox" id="no" name="criticalaccount" value="NO" />
+        <label for="no">NO</label><br>
+        <sup>*</sup>If YES, we can provide extra care in case of any quires.<br><br>
+        <label for="paymentOption">Payment Option:</label><br>
+        <input type="checkbox" id="CoD" name="paymentoption" value="Cash on Delivery" />
+        <label for="CoD"> Cash on Delivery </label> <br>
+        <input type="checkbox" id="upi" name="paymentoption" value="UPI" />
+        <label for="upi"> UPI </label> <br>
+        <input type="checkbox" id="CP" name="paymentoption" value="Card Payment" />
+        <label for="CP"> Card Payment </label><br><br>
+        <input type="reset" id="reset" name="reset" />
+        <button type="button" id="submit" name="submit" onclick="merchantForm()">Submit</button>
+    </form></div>
+    <br><br><br>
+    <div id="table">
+        <table id="merchantResponse">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                    <th>Contact Name</th>
+                    <th>Contact Phone</th>
+                    <th>Contact Email</th>
+                    <th>Notes</th>
+                    <th>Business Type</th>
+                    <th>Category</th>
+                    <th>Commission Percentage</th>
+                    <th>Active From</th>
+                    <th>Critical Account</th>
+                    <th>Payment Method</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="merchantResponse_tbody">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
